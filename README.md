@@ -1,4 +1,4 @@
-# How It Works: Pico Message Gadget (MicroPython Version)
+# How It Works: MicroPython Version
 The **Pico Message Gadget** is a message encryption tool designed for the Raspberry Pi Pico, running MicroPython. This version uses AES-CBC encryption with PKCS5/PKCS7 padding via the `ucryptolib` module. Below is a detailed explanation of how it works, how to set it up, and how to deploy it as a `.uf2` file.
 ---
 ## Setup
