@@ -114,6 +114,8 @@ print("Keys will be erased from RAM when the terminal closes.")
 - **Learning**: Experiment with different messages to observe ciphertext changes. Keep the key and IV at 32 hex characters (16 bytes) each for AES-CBC compatibility.
 ---
 This MicroPython version provides a simple, accessible way to explore encryption on the Pico, contrasting with the C++ and ARM assembly versions in buckets 2, 3 and so on.
+For references on the output format see: https://www.cryptomuseum.com/crypto/otp/index.htm for key exchange: none. Its OTP. Or use a Beale Cipher https://en.wikipedia.org/wiki/Beale_ciphers <80)
+
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡽⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⢋⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⢾⣛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⠟⣿⢸⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
