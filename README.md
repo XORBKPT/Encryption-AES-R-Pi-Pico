@@ -1,5 +1,5 @@
 # How It Works: MicroPython Version
-The **Pico Message Gadget** is a message encryption tool designed for the Raspberry Pi Pico, running MicroPython. This version uses AES-CBC encryption with PKCS5/PKCS7 padding via the `ucryptolib` module. Below is a detailed explanation of how it works, how to set it up, and how to deploy it as a `.uf2` file.
+The **Pico Message Gadget** is a message encryption tool designed for students beginning with the Raspberry Pi Pico, running MicroPython. This version uses AES-CBC encryption with PKCS5/PKCS7 padding via the `ucryptolib` module.
 ---
 ## Setup
 - **Hardware Connection**: The Raspberry Pi Pico, with MicroPython installed, connects to your PC via a USB cable. It appears as a virtual COM port (e.g., COM3 on Windows) for serial communication.
@@ -113,39 +113,4 @@ print("Keys will be erased from RAM when the terminal closes.")
 - **Implemenation Safety Idea**: Disconnect the Pico after use to ensure RAM clears the key and IV.
 - **Learning**: Experiment with different messages to observe ciphertext changes. Keep the key and IV at 32 hex characters (16 bytes) each for AES-CBC compatibility.
 ---
-This MicroPython version provides a simple, accessible way to explore encryption on the Pico, contrasting with the C++ and ARM assembly versions in buckets 2, 3 and so on.
-For references on the output format see: https://www.cryptomuseum.com/crypto/otp/index.htm for key exchange: none. Its OTP. Or use a Beale Cipher https://en.wikipedia.org/wiki/Beale_ciphers <80)
-
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡽⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⢋⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⢾⣛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⠟⣿⢸⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⠠⠤⢤⣤⣤⣴⣤⣤⣤⣤⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣄⣿⣿⣾⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⢹⣿⠀⠀⠀⠀⠀⣀⣠⣴⣶⡿⠿⠟⠒⠛⠉⠉⠉⠉⠉⠉⠉⠙⠛⠛⠻⠿⢿⣶⣤⣄⣀⠀⠀⠘⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣿⣿⠀⢀⣤⣶⠿⠛⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⠻⠿⣶⣤⣿⣿⣿⣿⣟⢿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⣿⣿⣿⣧⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⣀⣠⣤⣴⣶⣾⡿⠿⠿⠿⢿⣿⣷⣶⣤⣤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⡿⢿⣿⡿⠿⠛⣿⡿⠀⠀⢀⣠⣴⣾⣿⡟⠋⠉⠀⠀⠈⢧⡀⣷⣄⡂⠙⢧⡁⡝⢿⣿⣿⣿⣷⣦⣤⣀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣧⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣦⡀⠀⢀⡴⢻⣿⣴⣾⡿⣟⣉⣼⣟⠤⠤⠖⠒⠒⠒⠒⠻⢏⡛⢬⡙⠛⠳⢄⠀⠳⣍⡻⣿⣿⣿⠿⣿⣷⣶⣤⣄⣸⣿⣿⣿⣿⡏⢧⠀⠈⠻⢿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⠟⠀⢸⢹⠉⠀⢷⡏⢰⡟⠢⡄⢰⣶⣶⣿⣿⣿⣶⡖⠉⠢⢝⡂⠀⠀⠙⠢⢄⣙⣺⣿⣿⣷⣶⢾⡟⢻⣿⣿⣿⣿⣿⣿⠁⢈⡷⣄⢀⣀⣨⠭⠟⣩⣿⣿⣿
-⣿⣿⣿⣿⣿⡿⠛⠁⠀⠀⡜⣼⠀⢀⠀⣇⣿⣿⣿⡿⠟⣿⣿⣿⡿⣿⢿⣎⣳⢤⣀⠈⠙⢶⡶⠤⢤⣴⣶⣶⣷⣍⣫⡾⣡⣿⠿⣜⡇⠠⢀⡏⠀⢀⢳⡈⠑⢦⣤⣴⣾⣿⣿⣿⣿
-⣿⣿⣿⣦⣄⣀⣀⣀⣠⠊⡇⡏⢠⠈⠲⢿⣿⣿⣧⡀⠀⢴⣯⣙⠷⠿⠔⠊⠁⠀⠀⠉⠙⡒⠛⠦⠤⢌⣙⠋⠛⠉⠙⠛⠛⠋⠛⣼⡇⢀⣾⡇⠀⣾⡦⠽⣶⡤⣬⣭⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⡿⠿⠟⣡⡞⠁⡟⡆⢳⡀⢆⢿⠻⡑⠞⠋⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⡐⠀⢸⠲⣄⠀⠀⠀⠉⠓⠢⠤⣀⠀⣠⠞⣁⣴⣯⢏⡇⣰⣿⡇⠘⢾⡻⢿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⡿⠋⠀⢦⢱⢹⡀⠹⣌⢾⢧⠙⠦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣇⠀⢸⠀⠈⡆⠀⠀⠀⠀⠀⠑⠤⣉⣙⣉⢅⡾⢃⣾⣴⢯⡇⢻⡀⢠⣙⣦⣬⣽⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣷⣶⣶⡇⢸⡘⡄⢻⣄⠙⢿⣶⢵⣦⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢦⢘⣆⣠⠇⠀⠀⠀⠀⠀⠀⠀⠀⠰⢚⣹⢷⣿⡟⢡⣿⠁⠘⣧⡈⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⣎⡇⠘⡄⠻⣷⣄⠙⠧⣄⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣼⣋⣴⡿⡼⢀⡀⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⢸⣿⠃⠀⢨⢦⢌⣢⣙⣷⡺⣍⡉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⣯⡟⢹⣿⣧⠇⢸⡇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⢠⠀⢳⣷⣌⡙⠻⢧⠀⠀⢀⡀⠀⠀⠀⠀⠀⠀⠀⢀⡤⠤⣔⣒⠦⠤⠄⠀⠀⠀⠀⠀⠀⢠⢯⣾⢈⢼⡟⠏⢠⢿⢇⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⢸⣦⠀⠻⡝⣿⠛⡖⣿⡉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣰⡞⠁⣰⢋⡞⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡼⣿⣷⣄⠹⣼⢯⣷⠘⣿⢦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⠟⣿⣿⣿⣫⣴⢛⢳⣯⣞⣉⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠙⣾⣮⣿⣤⣿⣞⣿⣷⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠟⠁⢀⣿⣿⣿⣿⣾⣷⣿⡈⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⢠⣿⣿⣿⣿⣷⣿⣿⣿⣆⠈⠑⠢⣄⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠛⠁⣠⠔⠋⣿⣿⣿⣿⣿⣿⣿⣿⠙⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠃⠐⢋⣾⣿⣿⣿⣾⣿⣿⣿⣿⡀⠀⠀⠀⠉⠒⠤⢄⣀⣀⡠⠔⠋⣀⣠⣤⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⡿⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⣷⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡄⠀⠀⠀⠀⣀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⠉⣉⣍⣩⣭⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣎⠉⢃⠈⣼⣿⣿⣿⣿⣿⣿⡿⠟⠻⠿⣿⣿⣿⣿⣿⣿⣿⣿⣧⣤⣄⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠹⣿⣿⣿⣿⣦⣼⢤⣿⣿⣿⡿⠟⠋⠁⠀⠀⠀⠀⠀⣀⣉⣹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⡀⠀⡏⠹⡟⣿⣿⢀⡎⣽⠋⢰⠁⠀⠀⠀⠀⢀⣠⡴⠿⣛⣭⡷⠿⠛⠋⠉⠁⠀⢀⡤⣺⣷⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠏⠘⡟⣿⣆⡇⠀⢳⣷⣿⣿⢰⠏⠀⢺⣀⠤⠴⣒⣫⣽⣶⠾⠛⠉⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢋
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣿⣿⡏⠀⠀⠙⢮⣙⣷⠄⢀⣿⣿⣧⠋⠤⢒⡏⡔⢛⡉⠁⢀⠉⢀⠀⠀⠀⠀⠀⠀⠀⢀⡠⣻⣿⣿⣿⣿⣿⣿⣿⣿⡿⢋⠔⢉
+This MicroPython version provides a simple, accessible way to explore encryption on the Pico.
