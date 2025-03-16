@@ -73,5 +73,5 @@ while hex_str:
 # Inform the user that keys will be erased when the terminal closes
 print("The keys will now be erased from temporary RAM in the R Pi when window closes")
 
-# No explicit clearing of variables is needed; Pico's RAM is volatile and clears on power-off
-# When the user closes the terminal and disconnects the Pico, all data in RAM is lost
+# No explicit clearing of variables is needed; Pico's RAM is volatile and clears on power-off #
+# When the user closes the terminal and disconnects the Pico, all data in RAM is lost #
