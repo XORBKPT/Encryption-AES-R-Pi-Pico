@@ -113,4 +113,3 @@ print("Keys will be erased from RAM when the terminal closes.")
 - **Implemenation Safety Idea**: Disconnect the Pico after use to ensure RAM clears the key and IV.
 - **Learning**: Experiment with different messages to observe ciphertext changes. Keep the key and IV at 32 hex characters (16 bytes) each for AES-CBC compatibility.
 ---
-This MicroPython version provides a simple, accessible way to explore encryption on the Pico.
